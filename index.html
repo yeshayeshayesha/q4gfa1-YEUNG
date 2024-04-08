@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkBlur(element){
+            if(element.value.trim()== ''){
+                element.style.border = '1px solid red';
+            }else{
+                element.style.border = '1px solid green';
+            }
+        }
+
+        function focusFunction(){
+            element.style.border='';
+
+        }
+
+    </script>
+    <br><br>
+    <div class="container">
+    <div id="left"></div>
+
+    <div class="box">
+        <form id="signup" >
+            <fieldset form="login">
+                <legend>Sign-up </legend>
+                <div class="insideinfo">
+                    <label for="Name">username:</label><br/>
+                    <input type="text" id="username" name="un" onfocus="focusFunction()" onblur="checkBlur(this)" ><br><br><br>
+
+                    <label for="userName">prefered name:</label><br/>
+                    <input type="text" id="pun" name="pun" onfocus="focusFunction()" onblur="checkBlur(this)"><br><br><br>
+            
+                    <label for="password">password: </label><br>
+                    <input type = "password" id="pword" name="password" onfocus="focusFunction()" onblur="checkBlur(this)"><br><br><br>
+            
+                    <label for="email"> email:</label><br>
+                    <input type="email" id="email" name="email" onfocus="focusFunction()" onblur="checkBlur(this)"><br><br><br>
+
+                    <label for="comments">comments: </label></br>
+                    <textarea id="comment" name="comment" onfocus="focusFunction()" onblur="checkBlur(this)"></textarea><br><br><br>
+
+                    <label for="interest">interest: </label></br>
+                    <textarea id="interest" name="interest" onfocus="focusFunction()" onblur="checkBlur(this)"></textarea><br><br>
+
+                    <p>sex/gender:</p>
+                   
+                        <input type="radio" id="gender" value="girl" >
+                        <label for="girl">female</label>
+                        
+                        <input type="radio" id="gender" value="male">
+                        <label for="male">male</label>
+                        
+                        <input type="radio" id="gender">
+                        <label for="nb">prefer not to say</label><br><br>
+
+                        <input type="reset" value="Clear" class="clear">
+                        <input type="submit" value="Submit" id="sub" onsubmit="myFunction()">
+               
+                </div>
+            </fieldset>
+        </form>
+        
+    </div>
+    <div id="right"></div>
+</div>
+
+    <br><br><hr>
+
+    <fieldset id="infobox">
+        <legend>INFO</legend>
+        <div id="information"></div>
+    </fieldset>
+
+<script>
+    document.getElementById('signup').addEventListener('submit', function(event){
+        event.preventDefault();
+
+    var name = document.getElementById('username').value;
+    var un = document.getElementById('pun').value;
+    var pword = document.getElementById('pword').value;
+    var email = document.getElementById('email').value;
+    var comments = document.getElementById('comment').value;
+    var interest = document.getElementById('interest').value;
+    var gender = document.getElementById('gender').value;
+
+    var information = document.getElementById('information');
+    information.innerHTML = "Name: " + name + "<br>Prefered name: " + un + "<br> Password: " +pword + "<br>Email: "+ email
+    + "<br> Comments: " + comments + "<br> Interests: " + interest + "<br> Gender: " + gender;
+    });
+</script>
+
+
+    <link rel="stylesheet" href="style.css">
+</body>
+</html>

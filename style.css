@@ -1,0 +1,45 @@
+
+.container{
+    display: flex;
+}
+
+body{
+    background-color: pink;
+}
+
+.box{
+    text-align: center;
+    margin: auto;
+    background-color: antiquewhite;
+ 
+}
+
+.insideinfo{
+    margin: 30px;
+}
+
+
+.box{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#sub{
+    background-color: pink;
+    font-size: larger
+}
+
+.clear{
+    background-color:rgb(255, 97, 123) ;
+    font-size: larger;
+}
+
+fieldset{
+    color: rgb(242, 94, 118);
+
+}
+
+#infobox{
+    background-color: antiquewhite;
+    margin: 40px;
+    color: rgb(73, 0, 12);
+}
